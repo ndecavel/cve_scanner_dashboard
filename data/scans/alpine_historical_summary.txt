@@ -1,0 +1,34 @@
+CVE Scanner Dashboard - Scan Summary
+====================================
+
+Run ID: alpine_historical
+Date: Tue Nov 18 06:50:08 UTC 2025
+Input: historical-alpine-test.txt
+Images scanned: 3
+
+Scanners
+--------
+Requested: grype
+Successful: 1
+Failed: 0
+
+Successful scans:
+  ✓ grype -> data/scans/alpine_historical_grype.csv
+
+Output Files
+------------
+Merged CSV: data/scans/alpine_historical_merged.csv
+Summary: data/scans/alpine_historical_summary.txt
+
+Aggregate Statistics
+--------------------
+Total vulnerabilities: 38
+  Critical: 0
+  High: 6
+  Medium: 14
+  Low: 18
+
+Average per scan: 12.6 vulnerabilities
+
+By Image Type:
+  upstream: 38 total (12.6 avg across 3 scans)

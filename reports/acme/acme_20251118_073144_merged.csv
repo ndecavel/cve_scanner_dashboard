@@ -1,0 +1,13 @@
+scan_date,image_name,image_tag,image_type,scanner,total,critical,high,medium,low,wontfix,fixed_total,fixed_critical,fixed_high,fixed_medium,fixed_low,size_mb,created_date
+2025-11-18,alpine,3.22.2,upstream # Created: 2025-10-09,grype,6,0,0,0,6,0,0,0,0,0,0,7.93,2025-10-08
+2025-11-18,cgr.dev/chainguard/wolfi-base,latest,upstream,chainguard # Using current version,grype,0,0,0,0,0,0,0,0,0,0,0,15.10,2025-11-16
+2025-11-18,alpine,3.21.3,upstream # Created: 2025-02-14,grype,12,0,2,4,6,0,6,0,2,4,0,7.46,2025-02-14
+2025-11-18,cgr.dev/chainguard/wolfi-base,latest,upstream,chainguard # Using current version,grype,0,0,0,0,0,0,0,0,0,0,0,15.10,2025-11-16
+2025-11-18,alpine,3.20.3,upstream # Created: 2024-11-12,grype,20,0,4,10,6,0,14,0,4,10,0,7.43,2024-09-06
+2025-11-18,cgr.dev/chainguard/wolfi-base,latest,upstream,chainguard # Using current version,grype,0,0,0,0,0,0,0,0,0,0,0,15.10,2025-11-16
+2025-11-18,busybox,1.37.0-uclibc,upstream # Created: 2025-10-29,grype,2,0,0,0,2,0,0,0,0,0,0,1.17,2024-09-26
+2025-11-18,cgr.dev/chainguard/busybox,latest,upstream,chainguard # Using current version,grype,0,0,0,0,0,0,0,0,0,0,0,7.77,2025-11-11
+2025-11-18,busybox,1.35.0-uclibc,upstream # Created: 2024-09-12,grype,5,1,2,0,2,0,0,0,0,0,0,1.17,2021-12-26
+2025-11-18,cgr.dev/chainguard/busybox,latest,upstream,chainguard # Using current version,grype,0,0,0,0,0,0,0,0,0,0,0,7.77,2025-11-11
+2025-11-18,busybox,1.35.0-uclibc,upstream # Created: 2024-09-12,grype,5,1,2,0,2,0,0,0,0,0,0,1.17,2021-12-26
+2025-11-18,cgr.dev/chainguard/busybox,latest,upstream,chainguard # Using current version,grype,0,0,0,0,0,0,0,0,0,0,0,7.77,2025-11-11

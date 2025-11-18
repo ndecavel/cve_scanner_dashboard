@@ -1,0 +1,8 @@
+# Minimal test image list for debugging
+# Using small images for fast testing
+
+# Alpine is very small (~5MB) - good for testing
+alpine:latest,upstream
+
+# BusyBox is even smaller (~1-2MB)
+busybox:latest,upstream

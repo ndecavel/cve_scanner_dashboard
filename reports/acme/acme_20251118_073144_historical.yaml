@@ -1,0 +1,84 @@
+customer_images:
+- alpine:latest,upstream
+- busybox:latest,upstream
+mappings:
+- upstream:
+    full_ref: alpine:latest,upstream
+    registry: ''
+    registry_type: docker
+    image: alpine
+    tag: latest,upstream
+  chainguard:
+    full_ref: cgr.dev/chainguard/wolfi-base:latest,upstream
+    registry: cgr.dev/chainguard
+    image: wolfi-base
+    tag: latest,upstream
+  status: mapped
+  message: "Mapped alpine:latest,upstream \u2192 cgr.dev/chainguard/wolfi-base:latest,upstream"
+  alternative: null
+  upstream_versions:
+    current:
+      tag: 3.22.2
+      created: '2025-10-09T00:24:50.401841+00:00'
+      digest: sha256:85f2b723e106c34644cd5851d7e81ee87da98ac54672b29947c052a45d31dc2f
+      size: 29788199
+    six_months_ago:
+      tag: 3.21.3
+      created: '2025-02-14T19:25:28.998283+00:00'
+      digest: sha256:1de5eb4a9a6735adb46b2c9c88674c0cfba3444dd4ac2341b3babf1261700529
+      size: 28544893
+    one_year_ago:
+      tag: 3.20.3
+      created: '2024-11-12T04:26:08.365480+00:00'
+      digest: sha256:029a752048e32e843bd6defe3841186fb8d19a28dae8ec287f433bb9d6d1ad85
+      size: 28598836
+  chainguard_versions:
+    current:
+      tag: latest,upstream
+      created: null
+      digest: null
+      size: null
+    six_months_ago: null
+    one_year_ago: null
+- upstream:
+    full_ref: busybox:latest,upstream
+    registry: ''
+    registry_type: docker
+    image: busybox
+    tag: latest,upstream
+  chainguard:
+    full_ref: cgr.dev/chainguard/busybox:latest,upstream
+    registry: cgr.dev/chainguard
+    image: busybox
+    tag: latest,upstream
+  status: mapped
+  message: "Mapped busybox:latest,upstream \u2192 cgr.dev/chainguard/busybox:latest,upstream"
+  alternative: null
+  upstream_versions:
+    current:
+      tag: 1.37.0-uclibc
+      created: '2025-10-29T14:58:21.339922+00:00'
+      digest: sha256:47bbd49f26b51a8feb8572dfa029f8f13cb0301305fbf51e0475394aeb5bbf86
+      size: 4664595
+    six_months_ago:
+      tag: 1.35.0-uclibc
+      created: '2024-09-12T23:59:26.048002+00:00'
+      digest: sha256:32ff5b1723bccebc23986131ae9ca52ef7f4122729df7c325ee3b9505803ba6c
+      size: 4648220
+    one_year_ago:
+      tag: 1.35.0-uclibc
+      created: '2024-09-12T23:59:26.048002+00:00'
+      digest: sha256:32ff5b1723bccebc23986131ae9ca52ef7f4122729df7c325ee3b9505803ba6c
+      size: 4648220
+  chainguard_versions:
+    current:
+      tag: latest,upstream
+      created: null
+      digest: null
+      size: null
+    six_months_ago: null
+    one_year_ago: null
+statistics:
+  total: 2
+  resolved: 2
+  failed: 0

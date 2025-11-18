@@ -1,0 +1,34 @@
+CVE Scanner Dashboard - Scan Summary
+====================================
+
+Run ID: acme_20251118_073144
+Date: Tue Nov 18 07:32:57 UTC 2025
+Input: ./reports/acme/acme_20251118_073144_scan_list.txt
+Images scanned: 12
+
+Scanners
+--------
+Requested: grype
+Successful: 1
+Failed: 0
+
+Successful scans:
+  ✓ grype -> ./reports/acme/acme_20251118_073144_grype.csv
+
+Output Files
+------------
+Merged CSV: ./reports/acme/acme_20251118_073144_merged.csv
+Summary: ./reports/acme/acme_20251118_073144_summary.txt
+
+Aggregate Statistics
+--------------------
+Total vulnerabilities: 50
+  Critical: 2
+  High: 10
+  Medium: 14
+  Low: 24
+
+Average per scan: 4.1 vulnerabilities
+
+By Image Type:
+  upstream: 0 total (0 avg across 6 scans)

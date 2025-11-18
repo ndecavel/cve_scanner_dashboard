@@ -1,0 +1,4 @@
+scan_date,image_name,image_tag,image_type,scanner,total,critical,high,medium,low,wontfix,fixed_total,fixed_critical,fixed_high,fixed_medium,fixed_low,size_mb,created_date
+2025-11-18,alpine,3.22.2,upstream,grype,6,0,0,0,6,0,0,0,0,0,0,7.93,2025-10-08
+2025-11-18,alpine,3.21.3,upstream,grype,12,0,2,4,6,0,6,0,2,4,0,7.46,2025-02-14
+2025-11-18,alpine,3.20.3,upstream,grype,20,0,4,10,6,0,14,0,4,10,0,7.43,2024-09-06

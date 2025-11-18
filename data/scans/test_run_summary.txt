@@ -1,0 +1,34 @@
+CVE Scanner Dashboard - Scan Summary
+====================================
+
+Run ID: test_run
+Date: Tue Nov 18 06:45:54 UTC 2025
+Input: test-images.txt
+Images scanned: 2
+
+Scanners
+--------
+Requested: grype
+Successful: 1
+Failed: 0
+
+Successful scans:
+  ✓ grype -> data/scans/test_run_grype.csv
+
+Output Files
+------------
+Merged CSV: data/scans/test_run_merged.csv
+Summary: data/scans/test_run_summary.txt
+
+Aggregate Statistics
+--------------------
+Total vulnerabilities: 8
+  Critical: 0
+  High: 0
+  Medium: 0
+  Low: 8
+
+Average per scan: 4.0 vulnerabilities
+
+By Image Type:
+  upstream: 8 total (4.0 avg across 2 scans)

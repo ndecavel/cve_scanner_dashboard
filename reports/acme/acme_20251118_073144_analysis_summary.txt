@@ -1,0 +1,25 @@
+CVE Scanner Dashboard - Customer Analysis Summary
+==================================================
+
+Customer: ACME
+Analysis Date: Tue Nov 18 07:32:57 UTC 2025
+Run ID: acme_20251118_073144
+
+Files Generated:
+---------------
+- Mappings: acme_20251118_073144_mappings.yaml
+- Historical Versions: acme_20251118_073144_historical.yaml
+- Scan List: acme_20251118_073144_scan_list.txt
+- Scan Results (merged): acme_20251118_073144_merged.csv
+- Scan Summary: acme_20251118_073144_summary.txt
+
+Next Steps:
+-----------
+1. Review scan results in: acme_20251118_073144_merged.csv
+2. Import CSV into Excel/Sheets for analysis
+3. Create comparison charts (Chainguard vs upstream)
+4. Generate executive summary for customer
+
+For detailed analysis, use:
+  cat acme_20251118_073144_merged.csv | column -t -s,
+

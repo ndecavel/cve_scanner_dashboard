@@ -1,0 +1,4 @@
+upstream_image,chainguard_image
+python:3.11,cgr.dev/chainguard/python:latest
+node:20,cgr.dev/chainguard/node:latest
+nginx:latest,cgr.dev/chainguard/nginx:latest

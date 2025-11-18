@@ -1,0 +1,31 @@
+# CVE Scanner Dashboard - Example Image List
+# Format: image_reference,image_type
+#
+# image_type: "chainguard" or "upstream"
+# Lines starting with # are comments and will be ignored
+#
+# This file is used as input to the scanner scripts
+
+# Python images
+cgr.dev/chainguard/python:latest,chainguard
+python:3.11,upstream
+python:3.12,upstream
+
+# .NET images
+cgr.dev/chainguard/dotnet-runtime:8,chainguard
+mcr.microsoft.com/dotnet/runtime:8.0,upstream
+
+cgr.dev/chainguard/dotnet-sdk:8,chainguard
+mcr.microsoft.com/dotnet/sdk:8.0,upstream
+
+# Node.js images
+cgr.dev/chainguard/node:20,chainguard
+node:20,upstream
+
+# Java images
+cgr.dev/chainguard/jdk:openjdk-17,chainguard
+openjdk:17,upstream
+
+# Nginx
+cgr.dev/chainguard/nginx:latest,chainguard
+nginx:latest,upstream

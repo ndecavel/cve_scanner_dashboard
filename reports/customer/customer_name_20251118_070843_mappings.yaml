@@ -1,0 +1,111 @@
+customer_images:
+- python:3.11
+- node:20
+- ruby:3.2
+- nginx:latest
+- postgres:15
+- redis:7
+- mcr.microsoft.com/dotnet/runtime:8.0
+mappings:
+- upstream:
+    full_ref: python:3.11
+    registry: ''
+    registry_type: docker
+    image: python
+    tag: '3.11'
+  chainguard:
+    full_ref: cgr.dev/chainguard/python:latest
+    registry: cgr.dev/chainguard
+    image: python
+    tag: latest
+  status: mapped
+  message: "Mapped python:3.11 \u2192 cgr.dev/chainguard/python:latest"
+  alternative: null
+- upstream:
+    full_ref: node:20
+    registry: ''
+    registry_type: docker
+    image: node
+    tag: '20'
+  chainguard:
+    full_ref: cgr.dev/chainguard/node:latest
+    registry: cgr.dev/chainguard
+    image: node
+    tag: latest
+  status: mapped
+  message: "Mapped node:20 \u2192 cgr.dev/chainguard/node:latest"
+  alternative: null
+- upstream:
+    full_ref: ruby:3.2
+    registry: ''
+    registry_type: docker
+    image: ruby
+    tag: '3.2'
+  chainguard:
+    full_ref: cgr.dev/chainguard/ruby:3.2
+    registry: cgr.dev/chainguard
+    image: ruby
+    tag: '3.2'
+  status: mapped
+  message: "Mapped ruby:3.2 \u2192 cgr.dev/chainguard/ruby:3.2"
+  alternative: null
+- upstream:
+    full_ref: nginx:latest
+    registry: ''
+    registry_type: docker
+    image: nginx
+    tag: latest
+  chainguard:
+    full_ref: cgr.dev/chainguard/nginx:latest
+    registry: cgr.dev/chainguard
+    image: nginx
+    tag: latest
+  status: mapped
+  message: "Mapped nginx:latest \u2192 cgr.dev/chainguard/nginx:latest"
+  alternative: null
+- upstream:
+    full_ref: postgres:15
+    registry: ''
+    registry_type: docker
+    image: postgres
+    tag: '15'
+  chainguard:
+    full_ref: cgr.dev/chainguard/postgres:latest
+    registry: cgr.dev/chainguard
+    image: postgres
+    tag: latest
+  status: mapped
+  message: "Mapped postgres:15 \u2192 cgr.dev/chainguard/postgres:latest"
+  alternative: null
+- upstream:
+    full_ref: redis:7
+    registry: ''
+    registry_type: docker
+    image: redis
+    tag: '7'
+  chainguard:
+    full_ref: cgr.dev/chainguard/redis:latest
+    registry: cgr.dev/chainguard
+    image: redis
+    tag: latest
+  status: mapped
+  message: "Mapped redis:7 \u2192 cgr.dev/chainguard/redis:latest"
+  alternative: null
+- upstream:
+    full_ref: mcr.microsoft.com/dotnet/runtime:8.0
+    registry: mcr.microsoft.com
+    registry_type: mcr
+    image: dotnet/runtime
+    tag: '8.0'
+  chainguard:
+    full_ref: cgr.dev/chainguard/dotnet-runtime:8.0
+    registry: cgr.dev/chainguard
+    image: dotnet-runtime
+    tag: '8.0'
+  status: mapped
+  message: "Mapped mcr.microsoft.com/dotnet/runtime:8.0 \u2192 cgr.dev/chainguard/dotnet-runtime:8.0"
+  alternative: null
+statistics:
+  mapped: 7
+  unsupported: 0
+  not_found: 0

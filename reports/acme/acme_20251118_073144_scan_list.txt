@@ -1,0 +1,42 @@
+# CVE Scanner Dashboard - Scan List
+# Customer: ACME
+# Generated: 2025-11-18 07:31:52
+#
+# Format: image_reference,image_type
+#
+
+# ALPINE
+# Upstream: alpine:latest,upstream
+# Chainguard: cgr.dev/chainguard/wolfi-base:latest,upstream
+
+# Current
+alpine:3.22.2,upstream  # Created: 2025-10-09
+cgr.dev/chainguard/wolfi-base:latest,upstream,chainguard
+
+# 6 Months Ago
+alpine:3.21.3,upstream  # Created: 2025-02-14
+cgr.dev/chainguard/wolfi-base:latest,upstream,chainguard  # Using current version
+
+# 1 Year Ago
+alpine:3.20.3,upstream  # Created: 2024-11-12
+cgr.dev/chainguard/wolfi-base:latest,upstream,chainguard  # Using current version
+
+
+# BUSYBOX
+# Upstream: busybox:latest,upstream
+# Chainguard: cgr.dev/chainguard/busybox:latest,upstream
+
+# Current
+busybox:1.37.0-uclibc,upstream  # Created: 2025-10-29
+cgr.dev/chainguard/busybox:latest,upstream,chainguard
+
+# 6 Months Ago
+busybox:1.35.0-uclibc,upstream  # Created: 2024-09-12
+cgr.dev/chainguard/busybox:latest,upstream,chainguard  # Using current version
+
+# 1 Year Ago
+busybox:1.35.0-uclibc,upstream  # Created: 2024-09-12
+cgr.dev/chainguard/busybox:latest,upstream,chainguard  # Using current version
+
+
+# Total images to scan: 12

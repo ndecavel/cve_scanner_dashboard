@@ -1,0 +1,21 @@
+customer_images:
+- alpine:latest
+mappings:
+- upstream:
+    full_ref: alpine:latest
+    registry: ''
+    registry_type: docker
+    image: alpine
+    tag: latest
+  chainguard:
+    full_ref: cgr.dev/chainguard/wolfi-base:latest
+    registry: cgr.dev/chainguard
+    image: wolfi-base
+    tag: latest
+  status: mapped
+  message: "Mapped alpine:latest \u2192 cgr.dev/chainguard/wolfi-base:latest"
+  alternative: null
+statistics:
+  mapped: 1
+  unsupported: 0
+  not_found: 0

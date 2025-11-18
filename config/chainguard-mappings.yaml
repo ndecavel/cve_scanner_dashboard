@@ -1,0 +1,158 @@
+# Chainguard Image Mappings
+# Maps upstream container images to their Chainguard equivalents
+
+# Image name mappings (upstream → Chainguard)
+image_mappings:
+  # Python
+  python: cgr.dev/chainguard/python
+  python3: cgr.dev/chainguard/python
+
+  # Node.js
+  node: cgr.dev/chainguard/node
+  nodejs: cgr.dev/chainguard/node
+
+  # .NET
+  "dotnet/runtime": cgr.dev/chainguard/dotnet-runtime
+  "dotnet/sdk": cgr.dev/chainguard/dotnet-sdk
+  "dotnet/aspnet": cgr.dev/chainguard/aspnet-runtime
+
+  # Java/JDK
+  openjdk: cgr.dev/chainguard/jdk
+  eclipse-temurin: cgr.dev/chainguard/jdk
+  amazoncorretto: cgr.dev/chainguard/jdk
+
+  # Web Servers
+  nginx: cgr.dev/chainguard/nginx
+  httpd: cgr.dev/chainguard/httpd
+
+  # Databases
+  postgres: cgr.dev/chainguard/postgres
+  postgresql: cgr.dev/chainguard/postgres
+  redis: cgr.dev/chainguard/redis
+  mariadb: cgr.dev/chainguard/mariadb
+
+  # DevOps Tools
+  git: cgr.dev/chainguard/git
+  curl: cgr.dev/chainguard/curl
+  jq: cgr.dev/chainguard/jq
+
+  # Kubernetes/Cloud Native
+  kubectl: cgr.dev/chainguard/kubectl
+  helm: cgr.dev/chainguard/helm
+
+  # Istio
+  "istio/pilot": cgr.dev/chainguard/istio-pilot
+  "istio/proxyv2": cgr.dev/chainguard/istio-proxy
+  "istio/install-cni": cgr.dev/chainguard/istio-install-cni
+
+  # CI/CD
+  jenkins: cgr.dev/chainguard/jenkins
+  gitlab-runner: cgr.dev/chainguard/gitlab-runner
+
+  # Monitoring
+  prometheus: cgr.dev/chainguard/prometheus
+  grafana: cgr.dev/chainguard/grafana
+
+  # Other
+  busybox: cgr.dev/chainguard/busybox
+  alpine: cgr.dev/chainguard/wolfi-base
+  bash: cgr.dev/chainguard/bash
+  ruby: cgr.dev/chainguard/ruby
+
+# Tag translation rules
+# Maps upstream tag patterns to Chainguard equivalents
+tag_mappings:
+  python:
+    # Exact version matches
+    "3.11": "latest"
+    "3.11-slim": "latest"
+    "3.11-alpine": "latest"
+    "3.12": "latest"
+    "3.12-slim": "latest"
+    "3.13": "latest"
+    # Pattern: keep version numbers, drop suffixes
+    pattern: "^([0-9.]+).*$"
+    replacement: "\\1"
+
+  node:
+    "20": "latest"
+    "20-alpine": "latest"
+    "22": "latest"
+    "22-alpine": "latest"
+    "18": "latest"
+    pattern: "^([0-9.]+).*$"
+    replacement: "\\1"
+
+  nginx:
+    "latest": "latest"
+    "alpine": "latest"
+    "stable": "latest"
+    pattern: "^([0-9.]+).*$"
+    replacement: "\\1"
+
+  postgres:
+    "15": "latest"
+    "15-alpine": "latest"
+    "16": "latest"
+    pattern: "^([0-9.]+).*$"
+    replacement: "\\1"
+
+  redis:
+    "7": "latest"
+    "7-alpine": "latest"
+    "6": "latest"
+    pattern: "^([0-9.]+).*$"
+    replacement: "\\1"
+
+# Registry mappings
+registry_mappings:
+  # Docker Hub (no prefix or docker.io)
+  "": docker
+  "docker.io": docker
+
+  # Microsoft Container Registry
+  "mcr.microsoft.com": mcr
+
+  # Quay
+  "quay.io": quay
+
+  # Google Container Registry
+  "gcr.io": gcr
+  "us.gcr.io": gcr
+  "eu.gcr.io": gcr
+  "asia.gcr.io": gcr
+
+  # GitHub Container Registry
+  "ghcr.io": ghcr
+
+  # Amazon ECR (public)
+  "public.ecr.aws": ecr
+
+# Special handling rules
+special_cases:
+  # Images that don't have direct Chainguard equivalents
+  unsupported:
+    - "mysql"  # Use mariadb instead
+    - "mongo"  # No Chainguard equivalent
+    - "memcached"  # No Chainguard equivalent
+
+  # Images that need manual review
+  manual_review:
+    - "custom/*"  # Customer's custom images
+    - "*/private/*"  # Private images
+
+  # Alternative suggestions
+  alternatives:
+    mysql: "Use mariadb (cgr.dev/chainguard/mariadb) as MySQL-compatible alternative"
+    mongo: "No Chainguard equivalent - consider PostgreSQL or other supported databases"
+
+# Default behavior
+defaults:
+  # If no tag specified, use this
+  default_tag: "latest"
+
+  # If image not found in mappings
+  not_found_action: "warn"  # Options: warn, error, skip
+
+  # Chainguard registry prefix
+  chainguard_registry: "cgr.dev/chainguard"

@@ -1,0 +1,36 @@
+customer_images:
+- alpine:latest,upstream
+- busybox:latest,upstream
+mappings:
+- upstream:
+    full_ref: alpine:latest,upstream
+    registry: ''
+    registry_type: docker
+    image: alpine
+    tag: latest,upstream
+  chainguard:
+    full_ref: cgr.dev/chainguard/wolfi-base:latest,upstream
+    registry: cgr.dev/chainguard
+    image: wolfi-base
+    tag: latest,upstream
+  status: mapped
+  message: "Mapped alpine:latest,upstream \u2192 cgr.dev/chainguard/wolfi-base:latest,upstream"
+  alternative: null
+- upstream:
+    full_ref: busybox:latest,upstream
+    registry: ''
+    registry_type: docker
+    image: busybox
+    tag: latest,upstream
+  chainguard:
+    full_ref: cgr.dev/chainguard/busybox:latest,upstream
+    registry: cgr.dev/chainguard
+    image: busybox
+    tag: latest,upstream
+  status: mapped
+  message: "Mapped busybox:latest,upstream \u2192 cgr.dev/chainguard/busybox:latest,upstream"
+  alternative: null
+statistics:
+  mapped: 2
+  unsupported: 0
+  not_found: 0

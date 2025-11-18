@@ -1,0 +1,11 @@
+# End-to-end test: Alpine current vs historical
+# Generated based on historical tag resolution
+
+# Current (Nov 2025)
+alpine:3.22.2,upstream
+
+# 6 months ago (May 2025)
+alpine:3.21.3,upstream
+
+# 1 year ago (Nov 2024)
+alpine:3.20.3,upstream

@@ -1,0 +1,217 @@
+# CVE Scanner Dashboard - Image Comparison Configuration
+#
+# This file defines which Chainguard images to compare against upstream images
+# Used by the registry crawler to find historical versions and by the dashboard
+# to display comparison results
+
+comparisons:
+  # Python
+  - name: "Python 3.11"
+    description: "Python 3.11 runtime"
+    chainguard:
+      registry: "cgr.dev/chainguard"
+      image: "python"
+      tag: "latest"
+      tag_pattern: "3.11*"
+    upstream:
+      registry: "docker"
+      image: "python"
+      tag: "3.11"
+      tag_pattern: "3.11*"
+
+  - name: "Python 3.12"
+    description: "Python 3.12 runtime"
+    chainguard:
+      registry: "cgr.dev/chainguard"
+      image: "python"
+      tag: "latest"
+      tag_pattern: "3.12*"
+    upstream:
+      registry: "docker"
+      image: "python"
+      tag: "3.12"
+      tag_pattern: "3.12*"
+
+  - name: "Python 3.13"
+    description: "Python 3.13 runtime"
+    chainguard:
+      registry: "cgr.dev/chainguard"
+      image: "python"
+      tag: "latest"
+      tag_pattern: "3.13*"
+    upstream:
+      registry: "docker"
+      image: "python"
+      tag: "3.13"
+      tag_pattern: "3.13*"
+
+  # .NET
+  - name: ".NET 8 Runtime"
+    description: ".NET 8.0 runtime"
+    chainguard:
+      registry: "cgr.dev/chainguard"
+      image: "dotnet-runtime"
+      tag: "latest"
+      tag_pattern: "8*"
+    upstream:
+      registry: "mcr"
+      image: "dotnet/runtime"
+      tag: "8.0"
+      tag_pattern: "8.0*"
+
+  - name: ".NET 8 SDK"
+    description: ".NET 8.0 SDK"
+    chainguard:
+      registry: "cgr.dev/chainguard"
+      image: "dotnet-sdk"
+      tag: "latest"
+      tag_pattern: "8*"
+    upstream:
+      registry: "mcr"
+      image: "dotnet/sdk"
+      tag: "8.0"
+      tag_pattern: "8.0*"
+
+  - name: "ASP.NET 8 Runtime"
+    description: "ASP.NET Core 8.0 runtime"
+    chainguard:
+      registry: "cgr.dev/chainguard"
+      image: "aspnet-runtime"
+      tag: "latest"
+      tag_pattern: "8*"
+    upstream:
+      registry: "mcr"
+      image: "dotnet/aspnet"
+      tag: "8.0"
+      tag_pattern: "8.0*"
+
+  # Node.js
+  - name: "Node.js 20"
+    description: "Node.js 20.x LTS"
+    chainguard:
+      registry: "cgr.dev/chainguard"
+      image: "node"
+      tag: "latest"
+      tag_pattern: "20*"
+    upstream:
+      registry: "docker"
+      image: "node"
+      tag: "20"
+      tag_pattern: "20*"
+
+  - name: "Node.js 22"
+    description: "Node.js 22.x"
+    chainguard:
+      registry: "cgr.dev/chainguard"
+      image: "node"
+      tag: "latest"
+      tag_pattern: "22*"
+    upstream:
+      registry: "docker"
+      image: "node"
+      tag: "22"
+      tag_pattern: "22*"
+
+  # Java/JDK
+  - name: "OpenJDK 17"
+    description: "OpenJDK 17 LTS"
+    chainguard:
+      registry: "cgr.dev/chainguard"
+      image: "jdk"
+      tag: "latest"
+      tag_pattern: "openjdk-17*"
+    upstream:
+      registry: "docker"
+      image: "openjdk"
+      tag: "17"
+      tag_pattern: "17*"
+
+  - name: "OpenJDK 21"
+    description: "OpenJDK 21 LTS"
+    chainguard:
+      registry: "cgr.dev/chainguard"
+      image: "jdk"
+      tag: "latest"
+      tag_pattern: "openjdk-21*"
+    upstream:
+      registry: "docker"
+      image: "openjdk"
+      tag: "21"
+      tag_pattern: "21*"
+
+  # Nginx
+  - name: "Nginx"
+    description: "Nginx web server"
+    chainguard:
+      registry: "cgr.dev/chainguard"
+      image: "nginx"
+      tag: "latest"
+    upstream:
+      registry: "docker"
+      image: "nginx"
+      tag: "latest"
+
+  # Istio
+  - name: "Istio Pilot 1.22"
+    description: "Istio control plane (pilot)"
+    chainguard:
+      registry: "cgr.dev/chainguard"
+      image: "istio-pilot"
+      tag: "latest"
+      tag_pattern: "1.22*"
+    upstream:
+      registry: "docker"
+      image: "istio/pilot"
+      tag: "1.22.0"
+      tag_pattern: "1.22*"
+
+  - name: "Istio Proxy 1.22"
+    description: "Istio sidecar proxy (envoy)"
+    chainguard:
+      registry: "cgr.dev/chainguard"
+      image: "istio-proxy"
+      tag: "latest"
+      tag_pattern: "1.22*"
+    upstream:
+      registry: "docker"
+      image: "istio/proxyv2"
+      tag: "1.22.0"
+      tag_pattern: "1.22*"
+
+# Historical tracking configuration
+historical:
+  # Time periods to track
+  periods:
+    - name: "current"
+      offset_days: 0
+    - name: "6_months_ago"
+      offset_days: 180
+    - name: "1_year_ago"
+      offset_days: 365
+
+  # Tag selection strategy
+  tag_selection:
+    # Prefer tags with semantic versioning
+    prefer_semver: true
+    # Exclude tags matching these patterns
+    exclude_patterns:
+      - "*-dev"
+      - "*-alpha"
+      - "*-beta"
+      - "*-rc*"
+      - "sha256-*"
+      - "*-r[0-9]+"  # Exclude revision tags for cleaner historical view
+
+# Registry-specific configuration
+registry_config:
+  docker:
+    base_url: "https://hub.docker.com"
+    api_version: "v2"
+    rate_limit_delay_seconds: 1
+  mcr:
+    base_url: "https://mcr.microsoft.com"
+  quay:
+    base_url: "https://quay.io"
+  chainguard:
+    base_url: "cgr.dev"
+    use_chainctl: true
